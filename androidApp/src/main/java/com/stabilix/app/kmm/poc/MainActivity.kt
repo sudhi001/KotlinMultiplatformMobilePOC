@@ -9,6 +9,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.stabilix.app.kmm.poc.Greeting
+import androidx.compose.runtime.*
+import kotlinx.coroutines.launch
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,13 +21,23 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    GreetingView(Greeting().greet())
+                    val scope = rememberCoroutineScope()
+                    var text by remember { mutableStateOf("Loading") }
+                    LaunchedEffect(true) {
+                        scope.launch {
+                            text = try {
+                                Greeting().greet()
+                            } catch (e: Exception) {
+                                e.localizedMessage ?: "error"
+                            }
+                        }
+                    }
+                    GreetingView(text)
                 }
             }
         }
     }
 }
-
 @Composable
 fun GreetingView(text: String) {
     Text(text = text)
