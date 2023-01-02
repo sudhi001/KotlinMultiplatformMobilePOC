@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Kotline_Multiplatform_Mobile_POC"
+rootProject.name = "Kotlin_Multiplatform_Mobile_POC"
 include(":androidApp")
 include(":core")
