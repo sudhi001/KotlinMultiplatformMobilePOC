@@ -1,4 +1,4 @@
-package com.stabilix.app.kmm.poc.android
+package com.stabilix.app.kmm.poc
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.shape.RoundedCornerShape

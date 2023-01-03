@@ -4,12 +4,12 @@ plugins {
 }
 
 android {
-    namespace = "com.stabilix.app.kmm.poc.android"
-    compileSdk = 32
+    namespace = "com.stabilix.app.kmm.poc"
+    compileSdk = 33
     defaultConfig {
-        applicationId = "com.stabilix.app.kmm.poc.android"
+        applicationId = "com.stabilix.app.kmm.poc"
         minSdk = 21
-        targetSdk = 32
+        targetSdk = 33
         versionCode = 1
         versionName = "1.0"
     }
@@ -33,10 +33,10 @@ android {
 
 dependencies {
     implementation(project(":core"))
-    implementation("androidx.compose.ui:ui:1.2.1")
-    implementation("androidx.compose.ui:ui-tooling:1.2.1")
-    implementation("androidx.compose.ui:ui-tooling-preview:1.2.1")
-    implementation("androidx.compose.foundation:foundation:1.2.1")
-    implementation("androidx.compose.material:material:1.2.1")
-    implementation("androidx.activity:activity-compose:1.5.1")
+    implementation("androidx.compose.ui:ui:1.3.2")
+    implementation("androidx.compose.ui:ui-tooling:1.3.2")
+    implementation("androidx.compose.ui:ui-tooling-preview:1.3.2")
+    implementation("androidx.compose.foundation:foundation:1.3.1")
+    implementation("androidx.compose.material:material:1.3.1")
+    implementation("androidx.activity:activity-compose:1.6.1")
 }

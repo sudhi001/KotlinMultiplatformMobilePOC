@@ -1,4 +1,4 @@
-package com.stabilix.app.kmm.poc.android
+package com.stabilix.app.kmm.poc
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -8,8 +8,8 @@ import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.stabilix.app.kmm.poc.Greeting
 import androidx.compose.runtime.*
+import com.stabilix.app.kmm.poc.MyApplicationTheme
 import kotlinx.coroutines.launch
 
 class MainActivity : ComponentActivity() {
